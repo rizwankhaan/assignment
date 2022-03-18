@@ -275,7 +275,7 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
         // Number of Bedrooms Product Attribute
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
-            'dc_number_of_bedrooms',
+            'rk_number_of_bedrooms',
             [
                 'type' => 'int',
                 'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
@@ -307,7 +307,7 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
         // Number of Bathrooms
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
-            'dc_number_of_bathrooms',
+            'rk_number_of_bathrooms',
             [
                 'type' => 'int',
                 'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
@@ -339,7 +339,7 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
         // price
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
-            'dc_price',
+            'rk_price',
             [
                 'type' => 'varchar',
                 'label' => 'Price',
@@ -388,7 +388,7 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
         // For Sale / Rent
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
-            'dc_for_sale_rent',
+            'rk_for_sale_rent',
             [
                 'type' => 'int',
                 'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
@@ -430,10 +430,10 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
         $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_thumbnail_url');
         $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_latitude');
         $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_longitude');
-        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'dc_number_of_bedrooms');
-        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'dc_number_of_bathrooms');
-        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'dc_price');
+        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_number_of_bedrooms');
+        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_number_of_bathrooms');
+        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_price');
         $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_property_type');
-        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'dc_for_sale_rent');
+        $eavSetup->addAttributeToSet('catalog_product', $attributeSetId, 'RK Custom Attributes', 'rk_for_sale_rent');
     }
 }
