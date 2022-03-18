@@ -2,7 +2,7 @@
     "name": "rizwankhaan/assignment",
     "description": "A Custom Magento 2 module.",
     "type": "magento2-module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "authors": [{
         "name": "Rizwan Khan",
         "email": "rizwan2fb@gmail.com"
