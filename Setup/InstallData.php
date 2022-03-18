@@ -54,14 +54,12 @@ class InstallData implements \Magento\Framework\Setup\InstallDataInterface
      */
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
-
-
         $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
         $defaultAttributeSetId = $eavSetup->getDefaultAttributeSetId(\Magento\Catalog\Model\Product::ENTITY);
 
-        // $attrSet = $this->attributeSetInterfaceFactory->create();
-        // $attrSet->setAttributeSetName('RK Custom Group')->setEntityTypeId(\Magento\Catalog\Model\Product::ENTITY);
-        // $this->attributeSetManagement->create(\Magento\Catalog\Model\Product::ENTITY, $attrSet, $defaultAttributeSetId);
+        $attrSet = $this->attributeSetInterfaceFactory->create();
+        $attrSet->setAttributeSetName('RK Custom Group')->setEntityTypeId(\Magento\Catalog\Model\Product::ENTITY);
+        $this->attributeSetManagement->create(\Magento\Catalog\Model\Product::ENTITY, $attrSet, $defaultAttributeSetId);
 
         //county product attribute
         $eavSetup->addAttribute(
